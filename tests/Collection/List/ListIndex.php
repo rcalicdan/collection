@@ -36,6 +36,9 @@ trait ListIndex
         $this->assertSame(-1, $list->indexOf('z'));
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function indexOf_uses_strict_comparison(): void
     {

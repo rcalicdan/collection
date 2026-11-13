@@ -34,6 +34,9 @@ trait StringMapKeyEnforcement
         }
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function put_rejects_int_key(): void
     {
@@ -63,6 +66,9 @@ trait StringMapKeyEnforcement
         $this->assertSame('hello', $result->get('a'));
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function putIfAbsent_rejects_int_key(): void
     {
@@ -82,6 +88,9 @@ trait StringMapKeyEnforcement
         }
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function getOrNull_with_int_key_returns_null(): void
     {
@@ -93,6 +102,9 @@ trait StringMapKeyEnforcement
         $this->assertNull($map->getOrNull(true));
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function get_with_int_key_throws(): void
     {
@@ -103,6 +115,9 @@ trait StringMapKeyEnforcement
         $map->get(1);
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function containsKey_with_int_key_returns_false(): void
     {
@@ -116,6 +131,9 @@ trait StringMapKeyEnforcement
         $this->assertFalse($map->containsKey(true));
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function remove_with_int_key_does_nothing(): void
     {
@@ -178,6 +196,9 @@ trait StringMapKeyEnforcement
         $this->assertSame(['a' => 1, 'b' => 2, 'c' => 3], $sorted->toArray());
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function sortedBy_hands_numeric_keys_as_strings(): void
     {
@@ -252,6 +273,9 @@ trait StringMapKeyEnforcement
         $map->keys->random();
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function put_null_value(): void
     {
@@ -266,6 +290,9 @@ trait StringMapKeyEnforcement
         $this->assertTrue($map->containsKey('b'));
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function put_null_value_changed_tracking(): void
     {

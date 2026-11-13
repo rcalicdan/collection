@@ -48,6 +48,9 @@ final class ExceptionHierarchyTest extends TestCase
         $_ = $sequence->toArray(); // phpcs:ignore SlevomatCodingStandard.Variables.UnusedVariable.UnusedVariable
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function a_source_returning_a_non_iterable_is_caught_as_a_sequence_failure(): void
     {
@@ -59,6 +62,9 @@ final class ExceptionHierarchyTest extends TestCase
         $_ = $sequence->toArray(); // phpcs:ignore SlevomatCodingStandard.Variables.UnusedVariable.UnusedVariable
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function a_sequence_failure_is_also_caught_at_the_library_root(): void
     {
