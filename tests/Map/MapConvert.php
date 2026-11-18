@@ -61,6 +61,9 @@ trait MapConvert
         );
     }
 
+    /**
+     * @typephp-ignore
+     */
     #[Test]
     public function toArray_with_null_key_throws(): void
     {
